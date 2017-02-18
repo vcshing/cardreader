@@ -17,10 +17,10 @@ $$(document).on('deviceready', function() {
 	
    // Set AdMobAds options: 
   admob.setOptions({
-	publisherId:          "ca-app-pub-3715336230214756/4758230226",  // Required 
-	interstitialAdId:     "ca-app-pub-3715336230214756/6234963420",  // Optional 
-	tappxIdAndroid:       "/120940746/Pub-13206-Android-4560",        // Optional 
-	tappxShare:           0.2,
+	publisherId:          "ca-app-pub-3715336230214756/5679557820",  // Required 
+	interstitialAdId:     "ca-app-pub-3715336230214756/7156291028",  // Optional 
+	tappxIdAndroid:       "/120940746/Pub-14960-Android-6916",        // Optional 
+	tappxShare:           0.1,
 	isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
 	bannerAtTop: false, // set to true, to put banner at top
 	overlap: true, // set to true, to allow banner overlap webview
