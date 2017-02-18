@@ -31,9 +31,6 @@
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.skyexplorer.scanner"
         },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.skyexplorer.scanner"
-        },
         "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "com.skyexplorer.scanner"
         },
@@ -46,9 +43,6 @@
     },
     "dependent_plugins": {
         "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "com.skyexplorer.scanner"
-        },
-        "cordova-plugin-file": {
             "PACKAGE_NAME": "com.skyexplorer.scanner"
         }
     }

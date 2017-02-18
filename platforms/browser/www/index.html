@@ -197,16 +197,13 @@
    
 		})
 		
-
 		$('.barcodeBroswer').on('click', function(e){
 			e.preventDefault();
-		
 			var target = "_system";
 			var options = "location=yes";
 			var url =  $(".barcodeContent").html();
 			window.open(url, target, options);
 			
-			location.href =;
 		});
 		
 		$('.barcodeCopy').on('click', function(){
@@ -225,7 +222,7 @@
 			
 			
 		$(".contentsToBarcode").bind("click",function(){
-			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com", function(success) {
+			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, $(".barcodeContent").html(), function(success) {
 				//alert("encode success: " + success);
 			  }, function(fail) {
 				//alert("encoding failed: " + fail);
