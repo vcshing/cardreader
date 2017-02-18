@@ -39,13 +39,13 @@
         },
         "cordova-plugin-x-toast": {
             "PACKAGE_NAME": "com.skyexplorer.scanner"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.skyexplorer.scanner"
         }
     },
     "dependent_plugins": {
         "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "com.skyexplorer.scanner"
-        },
-        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.skyexplorer.scanner"
         },
         "cordova-plugin-file": {
