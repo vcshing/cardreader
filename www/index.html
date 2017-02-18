@@ -201,7 +201,10 @@
 			e.preventDefault();
 			var target = "_system";
 			var options = "location=yes";
-			var url =  $(".barcodeContent").html();
+			var url =  encodeURI($(".barcodeContent").html());
+			if(url.indexOf("http://")==-1){
+				url =  "http://" + url
+			}
 			window.open(url, target, options);
 			
 		});
