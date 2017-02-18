@@ -30,10 +30,25 @@
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.massage.scanner"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.massage.scanner"
+        },
+        "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "com.massage.scanner"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.massage.scanner"
         }
     },
     "dependent_plugins": {
         "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.massage.scanner"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.massage.scanner"
+        },
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "com.massage.scanner"
         }
     }
