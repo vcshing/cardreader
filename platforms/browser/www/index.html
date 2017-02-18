@@ -135,7 +135,7 @@
 								<div class="item-media"><i class="icon f7-icons">compose_fill</i></div>
 								<div class="item-inner">
 								   <div class="item-input">
-										<a href="#" class="button form-to-data">Contents To Barcode</a>
+										<a href="#" class="button form-to-data contentsToBarcode">Contents To Barcode</a>
 									</div>
 								</div>
 							  </div>
@@ -198,19 +198,37 @@
 		})
 		
 
-		$('.barcodeBroswer').on('click', function(){
-			location.href = $(".barcodeContent").html();
+		$('.barcodeBroswer').on('click', function(e){
+			e.preventDefault();
+		
+			var target = "_system";
+			var options = "location=yes";
+			var url =  $(".barcodeContent").html();
+			window.open(url, target, options);
+			
+			location.href =;
 		});
 		
 		$('.barcodeCopy').on('click', function(){
-			cordova.plugins.clipboard.copy($(".barcodeContent"));
+			cordova.plugins.clipboard.copy($(".barcodeContent").html());
+			window.plugins.toast.show(
+				$(".barcodeContent").html(), 'short', 'center', 
+				function(a){
+					console.log('toast success: ' + a)
+				}, 
+				function(b){
+					alert('toast error: ' + b)
+				}
+			)
 		});
 			
-		$(".onoffswitch-label2").bind("click",function(){
+			
+			
+		$(".contentsToBarcode").bind("click",function(){
 			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com", function(success) {
-				alert("encode success: " + success);
+				//alert("encode success: " + success);
 			  }, function(fail) {
-				alert("encoding failed: " + fail);
+				//alert("encoding failed: " + fail);
 			  }
 			);
 		});

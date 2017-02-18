@@ -197,24 +197,32 @@
    
 		})
 		
-
-		$('.barcodeBroswer').on('click', function(){
-			location.href = $(".barcodeContent").html();
+		$('.barcodeBroswer').on('click', function(e){
+			e.preventDefault();
+			var target = "_system";
+			var options = "location=yes";
+			var url =  $(".barcodeContent").html();
+			window.open(url, target, options);
+			
 		});
 		
 		$('.barcodeCopy').on('click', function(){
 			cordova.plugins.clipboard.copy($(".barcodeContent").html());
-			Toast.show($(".barcodeContent").html(), '1000', 'center').subscribe(
-			  toast => {
-				//console.log(toast);
-			  }
-			);
+			window.plugins.toast.show(
+				$(".barcodeContent").html(), 'short', 'center', 
+				function(a){
+					console.log('toast success: ' + a)
+				}, 
+				function(b){
+					alert('toast error: ' + b)
+				}
+			)
 		});
 			
 			
 			
 		$(".contentsToBarcode").bind("click",function(){
-			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com", function(success) {
+			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, $(".barcodeContent").html(), function(success) {
 				//alert("encode success: " + success);
 			  }, function(fail) {
 				//alert("encoding failed: " + fail);

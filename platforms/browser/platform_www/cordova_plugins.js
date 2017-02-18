@@ -313,6 +313,14 @@ module.exports = [
         "file": "plugins/cordova-plugin-x-toast/test/tests.js",
         "id": "cordova-plugin-x-toast.tests",
         "pluginId": "cordova-plugin-x-toast"
+    },
+    {
+        "file": "plugins/cordova-plugin-socialsharing/www/SocialSharing.js",
+        "id": "cordova-plugin-socialsharing.SocialSharing",
+        "pluginId": "cordova-plugin-socialsharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -331,7 +339,8 @@ module.exports.metadata =
     "cordova-plugin-file": "4.3.1",
     "cordova-plugin-media": "2.4.1",
     "com.verso.cordova.clipboard": "0.1.0",
-    "cordova-plugin-x-toast": "2.5.2"
+    "cordova-plugin-x-toast": "2.5.2",
+    "cordova-plugin-socialsharing": "4.3.81"
 }
 // BOTTOM OF METADATA
 });

@@ -47,7 +47,9 @@
 	<preference name="fullscreen" value="true" />
 	<preference name="android-build-tool" value="gradle" />
 	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
-  
+	<feature name="Toast">
+	  <param name="android-package" value="nl.xservices.plugins.Toast" />
+	</feature>
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" spec="~1.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
@@ -59,5 +61,6 @@
 	<plugin name="cordova-plugin-media" />
 	<plugin name="https://github.com/VersoSolutions/CordovaClipboard" />
 	<plugin name="cordova-plugin-x-toast" />
+	<plugin name="cordova-plugin-socialsharing" />
 	
 </widget>

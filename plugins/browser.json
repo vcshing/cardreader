@@ -42,6 +42,9 @@
         },
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.skyexplorer.scanner"
+        },
+        "cordova-plugin-socialsharing": {
+            "PACKAGE_NAME": "com.massage.scanner"
         }
     },
     "dependent_plugins": {
