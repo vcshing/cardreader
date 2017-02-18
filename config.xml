@@ -56,7 +56,7 @@
 	<plugin name="cordova-plugin-vibration" />
 	<plugin name="cordova-plugin-dialogs" />
 	<plugin name="phonegap-plugin-barcodescanner" />
-	<plugin name="cordova-plugin-media" />
+
 	<plugin name="com.verso.cordova.clipboard" />
 	<plugin name="cordova-plugin-x-toast" />
 	
