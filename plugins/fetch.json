@@ -70,6 +70,8 @@
             "id": "phonegap-plugin-barcodescanner"
         },
         "is_top_level": true,
-        "variables": {}
+        "variables": {
+            "CAMERA_USAGE_DESCRIPTION": "To scan barcodes"
+        }
     }
 }

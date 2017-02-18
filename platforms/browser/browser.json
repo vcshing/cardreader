@@ -43,7 +43,7 @@
             "PACKAGE_NAME": "com.massage.vibration"
         },
         "phonegap-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.massage.vibration"
+            "PACKAGE_NAME": "com.massage.scanner"
         }
     },
     "dependent_plugins": {},
