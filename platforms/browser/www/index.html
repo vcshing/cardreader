@@ -53,6 +53,10 @@
         <div class="content-block otherApp">
             <p>Other Apps</p>
         </div>
+		
+		<div class="content-block shareApp">
+            <p>Share App</p>
+        </div>
     </div>
 
     <!-- Views -->
@@ -113,7 +117,7 @@
 								<div class="item-media"><i class="icon f7-icons">world</i></div>
 								<div class="item-inner">
 								   <div class="item-input">
-										<a href="#" class="button form-to-data barcodeBroswer">Broswer Contents</a>
+										<a href="#" class="button form-to-data barcodeBroswer">Browser Contents</a>
 									</div>
 								</div>
 							  </div>
@@ -170,7 +174,7 @@
 		$('.barcodeScan').on('click', function(){
 		   cordova.plugins.barcodeScanner.scan(
 			  function (result) {
-				$(".barcodeContent").html(result.text);
+				$(".barcodeContent").val(result.text);
 																  /*
 																	  alert("We got a barcode\n" +
 																			"Result: " + result.text + "\n" +
@@ -201,15 +205,18 @@
 			e.preventDefault();
 			var target = "_system";
 			var options = "location=yes";
-			var url =  $(".barcodeContent").html();
+			var url =  encodeURI($(".barcodeContent").val());
+			if(url.indexOf("http://")==-1){
+				url =  "http://" + url
+			}
 			window.open(url, target, options);
 			
 		});
 		
 		$('.barcodeCopy').on('click', function(){
-			cordova.plugins.clipboard.copy($(".barcodeContent").html());
+			cordova.plugins.clipboard.copy($(".barcodeContent").val());
 			window.plugins.toast.show(
-				$(".barcodeContent").html(), 'short', 'center', 
+				$(".barcodeContent").val(), 'short', 'center', 
 				function(a){
 					console.log('toast success: ' + a)
 				}, 
@@ -222,7 +229,7 @@
 			
 			
 		$(".contentsToBarcode").bind("click",function(){
-			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, $(".barcodeContent").html(), function(success) {
+			 cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, $(".barcodeContent").val(), function(success) {
 				//alert("encode success: " + success);
 			  }, function(fail) {
 				//alert("encoding failed: " + fail);
@@ -238,6 +245,10 @@
 			var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
 			window.open(url, target, options);
 			
+		})
+		
+		$(".shareApp").bind("click",function(e){
+			window.plugins.socialsharing.share("Card Reader", "It is Useful", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.scanner");
 		})
 	})
 	
