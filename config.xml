@@ -67,5 +67,6 @@
 	<plugin name="https://github.com/VersoSolutions/CordovaClipboard" />
 	<plugin name="cordova-plugin-x-toast" />
 	<plugin name="cordova-plugin-x-socialsharing" />
+	<plugin name="cordova-plugin-network-information" />
 	
 </widget>
